@@ -1,7 +1,7 @@
 package com.zyl.mydemo;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 import android.widget.TextView;
 
@@ -11,7 +11,7 @@ import com.zyl.mydemo.util.ToastUtils;
 /**
  * Created by yinglong.zhang on 2016/7/1.
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends FragmentActivity {
 
     public TextView tvBack,tvTitle,tvNext;
 

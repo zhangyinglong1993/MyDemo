@@ -13,6 +13,7 @@ import com.zyl.mydemo.tab.ui.TabActivity;
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     private LinearLayout llTab;
+    private LinearLayout llLunbo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,23 +29,27 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private void initView() {
         tvTitle.setText("Home");
         llTab = (LinearLayout) findViewById(R.id.ll_tab);
+        llLunbo = (LinearLayout) findViewById(R.id.ll_lunbo);
     }
     /**
      * 设置监听
      */
     private void setListener() {
         llTab.setOnClickListener(this);
+        llLunbo.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.ll_tab:
+            case R.id.ll_tab://tab切换
                 Intent tab = new Intent(this, TabActivity.class);
                 startActivity(tab);
                 break;
+            case R.id.ll_lunbo://轮播
 
+                break;
             default:
                 break;
 
