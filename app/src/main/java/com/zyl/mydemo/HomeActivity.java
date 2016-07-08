@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.zyl.mydemo.imagePlay.ui.ImagePlayActivity;
 import com.zyl.mydemo.tab.ui.TabActivity;
 
 /**
@@ -48,7 +49,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(tab);
                 break;
             case R.id.ll_lunbo://轮播
-
+                Intent imagePlay = new Intent(this, ImagePlayActivity.class);
+                startActivity(imagePlay);
                 break;
             default:
                 break;
