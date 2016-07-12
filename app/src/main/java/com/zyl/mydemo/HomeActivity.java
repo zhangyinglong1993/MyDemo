@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.zyl.mydemo.imagePlay.ui.ImagePlayActivity;
+import com.zyl.mydemo.pageFragment.ui.PagerActivity;
 import com.zyl.mydemo.tab.ui.TabActivity;
 
 /**
@@ -14,7 +15,7 @@ import com.zyl.mydemo.tab.ui.TabActivity;
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     private LinearLayout llTab;
-    private LinearLayout llLunbo;
+    private LinearLayout llLunbo,llPageFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         tvTitle.setText("Home");
         llTab = (LinearLayout) findViewById(R.id.ll_tab);
         llLunbo = (LinearLayout) findViewById(R.id.ll_lunbo);
+        llPageFragment = (LinearLayout) findViewById(R.id.ll_pageFragment);
     }
     /**
      * 设置监听
@@ -38,6 +40,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private void setListener() {
         llTab.setOnClickListener(this);
         llLunbo.setOnClickListener(this);
+        llPageFragment.setOnClickListener(this);
     }
 
 
@@ -51,6 +54,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             case R.id.ll_lunbo://轮播
                 Intent imagePlay = new Intent(this, ImagePlayActivity.class);
                 startActivity(imagePlay);
+                break;
+            case R.id.ll_pageFragment://ViewPager+Fragment选项卡
+                Intent pageFragment = new Intent(this, PagerActivity.class);
+                startActivity(pageFragment);
                 break;
             default:
                 break;

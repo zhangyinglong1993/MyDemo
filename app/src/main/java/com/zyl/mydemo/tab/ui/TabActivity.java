@@ -42,7 +42,7 @@ public class TabActivity extends BaseActivity implements View.OnClickListener, R
     private void initView() {
 
         tvTitle.setText("tab切换界面");
-        tvBack.setVisibility(View.VISIBLE);
+        ivBack.setVisibility(View.VISIBLE);
 
         rgTab = (RadioGroup) findViewById(R.id.rg_tab);
         fragmentManager = getSupportFragmentManager();
@@ -51,7 +51,7 @@ public class TabActivity extends BaseActivity implements View.OnClickListener, R
     }
 
     private void setListener() {
-        tvBack.setOnClickListener(this);
+        ivBack.setOnClickListener(this);
         rgTab.setOnCheckedChangeListener(this);
     }
 
@@ -59,7 +59,7 @@ public class TabActivity extends BaseActivity implements View.OnClickListener, R
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.tv_back:
+            case R.id.iv_back:
                 finish();
                 break;
             default:

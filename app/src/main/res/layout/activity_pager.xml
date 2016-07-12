@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_title"/>
+
+    <RadioGroup
+        android:id="@+id/rg_page"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_a"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="A"
+            android:textSize="@dimen/font1"
+            android:textColor="@drawable/bottom_tv_color"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/rb_b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="B"
+            android:textSize="@dimen/font1"
+            android:textColor="@drawable/bottom_tv_color"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/rb_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="C"
+            android:textSize="@dimen/font1"
+            android:textColor="@drawable/bottom_tv_color"
+            android:gravity="center"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@color/red"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

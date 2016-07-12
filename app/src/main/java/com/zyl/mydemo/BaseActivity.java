@@ -3,6 +3,7 @@ package com.zyl.mydemo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zyl.mydemo.util.ExitUtil;
@@ -13,7 +14,8 @@ import com.zyl.mydemo.util.ToastUtils;
  */
 public class BaseActivity extends FragmentActivity {
 
-    public TextView tvBack,tvTitle,tvNext;
+    public ImageView ivBack;
+    public TextView tvTitle,tvNext;
 
     /**
      *  返回键 退出时间
@@ -30,7 +32,7 @@ public class BaseActivity extends FragmentActivity {
      * 初始化标题
      */
     public void initTitle() {
-        tvBack = (TextView) findViewById(R.id.tv_back);
+        ivBack = (ImageView) findViewById(R.id.iv_back);
         tvTitle = (TextView) findViewById(R.id.tv_title);
         tvNext = (TextView) findViewById(R.id.tv_next);
     }
